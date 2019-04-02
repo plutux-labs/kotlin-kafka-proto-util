@@ -26,7 +26,9 @@ publishing {
     }
     repositories {
         maven {
-            url = uri("https://oss.sonatype.org/content/repositories/snapshots")
+            url = if (project.version.toString().endsWith("SNAPSHOT"))
+                uri("https://oss.sonatype.org/content/repositories/snapshots")
+            else uri("https://oss.sonatype.org/service/local/staging/deploy/maven2/")
             credentials {
                 username = System.getenv("SONATYPE_USER")
                 password = System.getenv("SONATYPE_PASSWORD")
