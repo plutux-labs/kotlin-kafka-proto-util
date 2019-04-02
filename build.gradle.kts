@@ -12,8 +12,10 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("org.apache.kafka:kafka_2.12:1.1.+")
-    implementation("com.google.protobuf:protobuf-java:3.5.+")
+    implementation("org.mongodb:bson:3.3.0")
+    implementation("org.apache.kafka:kafka_2.12:1.1.0")
+    implementation("com.google.protobuf:protobuf-java:3.5.1")
+    implementation("io.github.gaplotech:kotlin-protobuf-bson-codec:0.3.0")
 }
 
 publishing {
